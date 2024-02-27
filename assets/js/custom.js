@@ -116,14 +116,10 @@ $(document).ready(function () {
 	});
 
 	// 6. submitForm
-
-	$("#formDetails").on("submit", function (event) {
-		event.preventDefault();
-	});
-
 	$(".single-contact-btn").on("click", function() {
         var button = $(this);
         button.text("Submitted!").css("color", "white");
+		document.getElementById("formDetails").reset();
         setTimeout(function() {
             button.text("Submit").css("color", "white");
         }, 2000);
